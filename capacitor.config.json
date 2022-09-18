@@ -1,0 +1,6 @@
+{
+  "appId": "tag_game.ru",
+  "appName": "tag-game",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
