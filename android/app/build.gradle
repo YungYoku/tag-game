@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
+
+    namespace 'tag_game.ru'
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "tag_game.ru"
