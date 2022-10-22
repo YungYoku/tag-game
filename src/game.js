@@ -748,7 +748,7 @@ const InitBasicObj = () => {
     scale: 0.3
   });
   appMc.mcBtnHome.interactive = true;
-  appMc.mcBtnHome.on("click", showMenu);
+  appMc.mcBtnHome.on("pointerup", showMenu);
 
   //- mcBtnSound
   appMc.mcBtnSound = new createContainer({ p: appMc.mcUI });
