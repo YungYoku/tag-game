@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@capacitor/android": "^4.2.0",
+    "@capacitor/assets": "^1.0.14",
     "@capacitor/core": "^4.2.0"
   }
 }

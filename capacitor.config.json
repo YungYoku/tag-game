@@ -1,6 +1,6 @@
 {
   "appId": "tag_game.ru",
-  "appName": "tag-game",
+  "appName": "Пятнашки",
   "webDir": "dist",
   "bundledWebRuntime": false
 }
