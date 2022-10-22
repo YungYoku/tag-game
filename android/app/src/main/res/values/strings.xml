@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Пятнашки</string>
+    <string name="title_activity_main">Пятнашки</string>
+    <string name="package_name">game_of_tag.ru</string>
+    <string name="custom_url_scheme">game_of_tag.ru</string>
+</resources>
