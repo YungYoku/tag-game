@@ -1,3 +1,5 @@
+window.screen.orientation.lock("portrait");
+
 let i, j, k, n;
 
 let appObj = {
