@@ -9,15 +9,15 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@capacitor/cli": "^4.2.0",
-    "eslint": "^8.23.0",
+    "@capacitor/cli": "^4.4.0",
+    "eslint": "^8.27.0",
     "prettier": "^2.7.1",
-    "vite": "^3.1.2",
-    "vite-plugin-pwa": "^0.12.8"
+    "vite": "^3.2.4",
+    "vite-plugin-pwa": "^0.13.3"
   },
   "dependencies": {
-    "@capacitor/android": "^4.2.0",
-    "@capacitor/assets": "^1.0.14",
-    "@capacitor/core": "^4.2.0"
+    "@capacitor/android": "^4.4.0",
+    "@capacitor/assets": "^2.0.1",
+    "@capacitor/core": "^4.4.0"
   }
 }
