@@ -64,19 +64,18 @@
 
     <script>window.yaContextCb=window.yaContextCb||[]</script>
     <script src="https://yandex.ru/ads/system/context.js" async></script>
-    <script>
-        window.onload = () => {
-            window.yaContextCb.push(()=>{
-                Ya.Context.AdvManager.render({
-                    renderTo: 'promotion_left',
-                    blockId: 'R-A-1981742-1'
-                })
-            })
-        }
-    </script>
+
 </head>
 <body ondragstart="return false;" ondrop="return false;">
-<div id="promotion_left" class="promotion_left"></div>
+<script>
+    window.yaContextCb.push(()=>{
+        Ya.Context.AdvManager.render({
+            renderTo: 'promotion_left',
+            blockId: 'R-A-1981742-1'
+        })
+    })
+</script>
+<div id="promotion_left"></div>
 
 <div id="main">
   <div id="pixi"></div>
