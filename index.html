@@ -57,19 +57,28 @@
           top: 0;
       }
 
-      #progress {
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          width: 32px;
-          height: 32px;
-          margin-left: -16px;
-          margin-top: -16px;
-          z-index: 5999;
+      #promotion_left {
+        height: 100px;
       }
   </style>
+
+    <script>window.yaContextCb=window.yaContextCb||[]</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <script>
+        document.addEventListener("")
+        window.onload = () => {
+            window.yaContextCb.push(()=>{
+                Ya.Context.AdvManager.render({
+                    renderTo: 'promotion_left',
+                    blockId: 'R-A-1981742-1'
+                })
+            })
+        }
+    </script>
 </head>
 <body ondragstart="return false;" ondrop="return false;">
+<div id="promotion_left" class="promotion_left"></div>
+
 <div id="main">
   <div id="pixi"></div>
 </div>
