@@ -65,6 +65,15 @@
         top: 10vh;
         left: 5%;
       }
+
+      #promotion_right {
+        width: 250px;
+        height: 80vh;
+
+        position: absolute;
+        top: 10vh;
+        right: 5%;
+      }
   </style>
 
     <script>window.yaContextCb=window.yaContextCb||[]</script>
@@ -80,7 +89,17 @@
         })
     })
 </script>
+<script>
+    window.yaContextCb.push(()=>{
+        Ya.Context.AdvManager.render({
+            renderTo: 'promotion_right',
+            blockId: 'R-A-1981742-2'
+        })
+    })
+</script>
+
 <div id="promotion_left"></div>
+<div id="promotion_right"></div>
 
 <div id="main">
   <div id="pixi"></div>
