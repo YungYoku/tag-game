@@ -132,7 +132,7 @@ for (i = 0; i < aLoadSounds.length; i++) {
   }
 }
 
-const aDataDigit = [
+const dataDigit = [
   {
     frames: {
       "0.png": {
@@ -379,6 +379,7 @@ const handlePointerUp = (obj, x, y) => {
     moveCell(obj, x, y);
 
     if (checkWin()) {
+        removeTimer();
       appMc.mcEnding.visible = true;
     }
   }
@@ -428,7 +429,7 @@ const initCell = (x, y) => {
   appMc.cellsDigitWrap[x][y] = new createDigit({
     p: appMc.cells[x][y],
     tex: "digit",
-    data: aDataDigit,
+    data: dataDigit,
     num: 0,
     spacing: 0,
     x: digitX,
@@ -521,6 +522,7 @@ const startGame = () => {
   appMc.gameStarted = true;
   initEnding();
   showCells();
+  initTimer();
 };
 
 const updateGridSize = () => {
@@ -592,7 +594,7 @@ const initDifficulty = () => {
   appMc.mcDifficltyNumber = new createDigit({
     p: appMc.mcDifficltyWrap,
     tex: "digit",
-    data: aDataDigit,
+      data: dataDigit,
     num: 0,
     spacing: 0,
     x: 50,
@@ -634,8 +636,48 @@ const initStart = () => {
   initDifficulty();
 };
 
+const removeTimer = () => {
+    appMc.timerDigitWrap.visible = false;
+    if(appMc.timeInterval) {
+        clearInterval(appMc.timeInterval);
+    }
+};
+
+const initTimer = () => {
+    appMc.timerDigitWrap.visible = true;
+    appMc.timeInterval = setInterval(() => {
+        appMc.time++;
+        appMc.timerDigit.update(appMc.time);
+    }, 1000);
+};
+
+const initTimerDigit = () => {
+    appMc.time = 0;
+    appMc.timerDigitWrap = new createContainer({
+        p: appMc.mcGrid,
+        x: appMc.gridWidth / 2 - 20,
+        y: -40,
+        visible:false
+    });
+    appMc.timerDigit = new createDigit({
+        p:appMc.timerDigitWrap,
+        tex: "digit",
+        data: dataDigit,
+        num: 0,
+        spacing:0,
+        aling:"center",
+        separate:false,
+        snum:0,
+        pref:"",
+        tint:0xffffff,
+        scale:1.5
+    });
+    appMc.timerDigit.update(appMc.time);
+};
+
 const initGrid = () => {
-  appMc.cellsDifficlty = 3;
+    appMc.timeInterval = null;
+    appMc.cellsDifficlty = 3;
   appMc.cellsRowsAmount = appMc.cellsDifficlty;
   appMc.cellsColumnsAmount = appMc.cellsDifficlty;
   appMc.cellsSize = 100;
@@ -666,9 +708,11 @@ const initGrid = () => {
 
   initStart();
   initEnding();
+  initTimerDigit();
 };
 
 const showMenu = () => {
+    removeTimer();
   restart();
 };
 
