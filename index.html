@@ -150,7 +150,11 @@ class createContainer{constructor({name:a,p:b,visible:c=!0,alpha:d=1,x:e=0,y:f=0
 
 </script>
 <script>
-window.screen.orientation.lock("portrait");
+try {
+    window.screen.orientation.lock("portrait");
+} catch (error) {
+    console.log(error);
+}
 
 let i, j, k, n;
 

@@ -1,4 +1,8 @@
-window.screen.orientation.lock("portrait");
+try {
+    window.screen.orientation.lock("portrait");
+} catch (error) {
+    console.log(error);
+}
 
 let i, j, k, n;
 
