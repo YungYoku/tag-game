@@ -1,3 +1,11 @@
+const video = document.querySelector(".video");
+const closeVideoButton = video.querySelector(".close");
+
+closeVideoButton.addEventListener("click", () => {
+    video.classList.add("hide");
+})
+
+
 try {
     window.screen.orientation.lock("portrait");
 } catch (error) {
@@ -730,7 +738,14 @@ const initGrid = () => {
     initTimerDigit();
 };
 
+const showVideo = () => {
+    if (appMc.gameStarted) {
+        video.classList.remove("hide");
+    }
+}
+
 const showMenu = () => {
+    showVideo();
     restart();
     removeTimer();
 };
