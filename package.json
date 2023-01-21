@@ -17,8 +17,5 @@
     "prettier": "^2.8.1",
     "vite": "^4.0.3",
     "vite-plugin-pwa": "^0.14.0"
-  },
-  "dependencies": {
-    "vite-plugin-singlefile": "^0.13.2"
   }
 }
