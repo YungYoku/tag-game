@@ -290,7 +290,6 @@ const hideCells = () => {
 
 const restart = () => {
     initStart();
-    showVideo(1);
     appMc.mcEnding.visible = false;
     appMc.mcStart.visible = true;
     appMc.gameStarted = false;
@@ -333,7 +332,10 @@ const initEnding = () => {
         scale: 0.5,
     });
     appMc.endingRestart.interactive = true;
-    appMc.endingRestart.on("pointerup", restart);
+    appMc.endingRestart.on("pointerup", () => {
+        showVideo(1);
+        restart();
+    });
 };
 
 const checkWin = () => {
@@ -789,7 +791,6 @@ const initGrid = () => {
 
 const showVideo = index => {
     videos[index].classList.remove("hide");
-    console.log(videos, index, videos[index]);
 }
 
 const showMenu = () => {
