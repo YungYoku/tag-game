@@ -50,7 +50,7 @@ const moduleTexture = {
 
         {
             name: "digit",
-            path: "data:image/png;base64,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",
+            path: " data:image/png;base64,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"
         },
 
         {
@@ -152,89 +152,82 @@ const dataDigit = [
     {
         frames: {
             "0.png": {
-                frame: {x: 0, y: 0, w: 20, h: 30},
+                frame: {x: 0, y: 0, w: 36, h: 54},
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 20, h: 30},
-                sourceSize: {w: 20, h: 30},
+                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
+                sourceSize: {w: 36, h: 54},
             },
             "1.png": {
-                frame: {x: 20, y: 0, w: 20, h: 30},
+                frame: {x: 36, y: 0, w: 36, h: 54},
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 20, h: 30},
-                sourceSize: {w: 20, h: 30},
+                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
+                sourceSize: {w: 36, h: 54},
             },
             "2.png": {
-                frame: {x: 40, y: 0, w: 20, h: 30},
+                frame: {x: 72, y: 0, w: 36, h: 54},
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 20, h: 30},
-                sourceSize: {w: 20, h: 30},
+                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
+                sourceSize: {w: 36, h: 54},
             },
             "3.png": {
-                frame: {x: 60, y: 0, w: 20, h: 30},
+                frame: {x: 108, y: 0, w: 36, h: 54},
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 20, h: 30},
-                sourceSize: {w: 20, h: 30},
+                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
+                sourceSize: {w: 36, h: 54},
             },
             "4.png": {
-                frame: {x: 80, y: 0, w: 20, h: 30},
+                frame: {x: 144, y: 0, w: 36, h: 54},
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 20, h: 30},
-                sourceSize: {w: 20, h: 30},
+                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
+                sourceSize: {w: 36, h: 54},
             },
             "5.png": {
-                frame: {x: 100, y: 0, w: 20, h: 30},
+                frame: {x: 180, y: 0, w: 36, h: 54},
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 20, h: 30},
-                sourceSize: {w: 20, h: 30},
+                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
+                sourceSize: {w: 36, h: 54},
             },
             "6.png": {
-                frame: {x: 0, y: 30, w: 20, h: 30},
+                frame: {x: 216, y: 0, w: 36, h: 54},
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 20, h: 30},
-                sourceSize: {w: 20, h: 30},
+                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
+                sourceSize: {w: 36, h: 54},
             },
             "7.png": {
-                frame: {x: 20, y: 30, w: 20, h: 30},
+                frame: {x: 252, y: 0, w: 36, h: 54},
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 20, h: 30},
-                sourceSize: {w: 20, h: 30},
+                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
+                sourceSize: {w: 36, h: 54},
             },
             "8.png": {
-                frame: {x: 40, y: 30, w: 20, h: 30},
+                frame: {x: 288, y: 0, w: 36, h: 54},
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 20, h: 30},
-                sourceSize: {w: 20, h: 30},
+                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
+                sourceSize: {w: 36, h: 54},
             },
             "9.png": {
-                frame: {x: 60, y: 30, w: 20, h: 30},
+                frame: {x: 324, y: 0, w: 36, h: 54},
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 20, h: 30},
-                sourceSize: {w: 20, h: 30},
-            },
-            "dot.png": {
-                frame: {x: 80, y: 30, w: 20, h: 30},
-                rotated: false,
-                trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 20, h: 30},
-                sourceSize: {w: 20, h: 30},
+                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
+                sourceSize: {w: 36, h: 54},
             },
         },
         meta: {
-            app: "Adobe Animate",
-            version: "20.0.2.22168",
+            app: "Yoku",
+            version: "1",
             image: "digit.png",
             format: "RGBA8888",
-            size: {w: 128, h: 64},
+            size: {w: 360, h: 54},
             scale: "1",
         },
     },
@@ -450,7 +443,7 @@ const initCell = (x, y) => {
     });
 
     appMc.cellsDigit[x][y] = x + y * appMc.cellsColumnsAmount + 1;
-    const digitX = appMc.cellsDigit[x][y] < 10 ? 30 : 20;
+    const digitX = appMc.cellsDigit[x][y] < 10 ? 25 : 20;
 
     appMc.cellsDigitWrap[x][y] = new createDigit({
         p: appMc.cells[x][y],
@@ -459,12 +452,13 @@ const initCell = (x, y) => {
         num: 0,
         spacing: 0,
         x: digitX,
-        y: 65,
+        y: 70,
         aling: "left",
         separate: false,
         snum: 0,
         pref: "",
         tint: 0xffffff,
+        scale:0.7
     });
 
     appMc.cellsDigitWrap[x][y].update(appMc.cellsDigit[x][y]);
@@ -624,12 +618,13 @@ const initDifficulty = () => {
         num: 0,
         spacing: 0,
         x: 50,
-        y: 16,
+        y: 18,
         aling: "left",
         separate: false,
         snum: 0,
         pref: "",
         tint: 0xffffff,
+        scale:0.7
     });
     appMc.mcDifficltyNumber.update(appMc.cellsDifficlty);
 };
@@ -695,17 +690,20 @@ const initTimer = () => {
 const updateTextTimerPos = () => {
     appMc.mcTimerText.visible = true;
     if (appMc.time > 999) {
-        appMc.mcTimerText.x = 150;
-        appMc.timerDigitWrap.x = appMc.gridWidth / 2 - 70;
-    } else if (appMc.time > 99) {
-        appMc.mcTimerText.x = 130;
-        appMc.timerDigitWrap.x = appMc.gridWidth / 2 - 60;
-    } else if (appMc.time > 9) {
         appMc.mcTimerText.x = 110;
         appMc.timerDigitWrap.x = appMc.gridWidth / 2 - 50;
-    } else {
+    } else if (appMc.time > 99) {
+        console.log(1)
+        appMc.mcTimerText.x = 100;
+        appMc.timerDigitWrap.x = appMc.gridWidth / 2 - 50;
+    } else if (appMc.time > 9) {
+        console.log(2)
         appMc.mcTimerText.x = 90;
         appMc.timerDigitWrap.x = appMc.gridWidth / 2 - 40;
+    } else {
+        console.log(3)
+        appMc.mcTimerText.x = 80;
+        appMc.timerDigitWrap.x = appMc.gridWidth / 2 - 30;
     }
 };
 
@@ -713,8 +711,8 @@ const initTimerText = () => {
     appMc.mcTimerText = new createSprite({
         p: appMc.timerDigitWrap,
         tex: "sec",
-        x: 90,
-        y: -23,
+        x: 80,
+        y: -20,
         scale: 0.5,
         visible: false
     });
@@ -724,8 +722,8 @@ const initTimerDigit = () => {
     appMc.time = 0;
     appMc.timerDigitWrap = new createContainer({
         p: appMc.mcGrid,
-        x: appMc.gridWidth / 2 - 20,
-        y: -40,
+        x: appMc.gridWidth / 2 - 6,
+        y: -20,
         visible: false
     });
     appMc.timerDigit = new createDigit({
@@ -739,7 +737,7 @@ const initTimerDigit = () => {
         snum: 0,
         pref: "",
         tint: 0xffffff,
-        scale: 1.5
+        scale: 0.7
     });
     appMc.timerDigit.update(appMc.time);
 };
