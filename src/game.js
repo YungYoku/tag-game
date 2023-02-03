@@ -1,8 +1,16 @@
-const video = document.querySelector(".video");
-const closeVideoButton = video.querySelector(".close");
+const video1 = document.querySelector(".video1");
+const closeVideoButton1 = video1.querySelector(".close");
 
-closeVideoButton.addEventListener("click", () => {
-    video.classList.add("hide");
+const video2 = document.querySelector(".video2");
+const closeVideoButton2 = video2.querySelector(".close");
+
+const videos = [video1, video2];
+
+closeVideoButton1.addEventListener("click", () => {
+    videos[0].classList.add("hide");
+})
+closeVideoButton2.addEventListener("click", () => {
+    videos[1].classList.add("hide");
 })
 
 
@@ -282,6 +290,7 @@ const hideCells = () => {
 
 const restart = () => {
     initStart();
+    showVideo(1);
     appMc.mcEnding.visible = false;
     appMc.mcStart.visible = true;
     appMc.gameStarted = false;
@@ -701,7 +710,6 @@ const updateTextTimerPos = () => {
         appMc.mcTimerText.x = 90;
         appMc.timerDigitWrap.x = appMc.gridWidth / 2 - 40;
     } else {
-        console.log(3)
         appMc.mcTimerText.x = 80;
         appMc.timerDigitWrap.x = appMc.gridWidth / 2 - 30;
     }
@@ -779,15 +787,14 @@ const initGrid = () => {
     initTimerText();
 };
 
-const showVideo = () => {
-    if (appMc.gameStarted) {
-        video.classList.remove("hide");
-    }
+const showVideo = index => {
+    videos[index].classList.remove("hide");
+    console.log(videos, index, videos[index]);
 }
 
 const showMenu = () => {
     if (appMc.gameStarted) {
-        showVideo();
+        showVideo(0);
         restart();
         removeTimer();
         hideTimer();
