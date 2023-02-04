@@ -635,6 +635,9 @@ const changeDifficulty = () => {
     }
     appMc.mcDifficltyNumber.update(appMc.cellsDifficlty);
 
+    const xMargin = appMc.cellsDifficlty - 3;
+    appMc.timerDigitWrapWrap.x = xMargin * 52;
+
     updateGridSize();
 };
 
@@ -764,8 +767,13 @@ const initTimerText = () => {
 
 const initTimerDigit = () => {
     appMc.time = 0;
-    appMc.timerDigitWrap = new createContainer({
+    appMc.timerDigitWrapWrap = new createContainer({
         p: appMc.mcGrid,
+        x: 0,
+        y: 0,
+    });
+    appMc.timerDigitWrap = new createContainer({
+        p: appMc.timerDigitWrapWrap,
         x: appMc.gridWidth / 2 - 6,
         y: -20,
         visible: false
