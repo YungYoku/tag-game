@@ -333,6 +333,7 @@ const restart = () => {
     hideTimer();
     hideCells();
     updateGridSize();
+    startGame();
 };
 
 const initEnding = () => {
@@ -830,7 +831,15 @@ const showVideo = index => {
 const showMenu = () => {
     if (appMc.gameStarted) {
         showVideo(0);
-        restart();
+        initStart();
+        appMc.mcEnding.visible = false;
+        appMc.mcStart.visible = true;
+        appMc.gameStarted = false;
+        appMc.timerDigitWrap.x = appMc.gridWidth / 2 - 6;
+        initTimer();
+        hideTimer();
+        hideCells();
+        updateGridSize();
         removeTimer();
         hideTimer();
     }
