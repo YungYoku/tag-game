@@ -1,16 +1,45 @@
 const video1 = document.querySelector(".video1");
 const closeVideoButton1 = video1.querySelector(".close");
+const closeVideoButton1Img = closeVideoButton1.querySelector(".image");
+const closeVideoButton1Text = closeVideoButton1.querySelector(".text");
 
 const video2 = document.querySelector(".video2");
 const closeVideoButton2 = video2.querySelector(".close");
+const closeVideoButton2Img = closeVideoButton2.querySelector(".image");
+const closeVideoButton2Text = closeVideoButton2.querySelector(".text");
 
 const videos = [video1, video2];
+const videoImages = [closeVideoButton1Img, closeVideoButton2Img];
+const videoTexts = [closeVideoButton1Text, closeVideoButton2Text];
+
+const hideVideo = index => {
+    videos[index].classList.add("hide");
+}
+
+const animateVideoButton = index => {
+    console.log(1)
+    videos[index].classList.remove("hide");
+    videoImages[index].classList.add("hide");
+
+    let videoTimer = 9;
+    console.log(videoTexts[index])
+    videoTexts[index].innerHTML = "" + videoTimer--;
+    const interval = setInterval(() => {
+        if (videoTimer >= 0) {
+            videoTexts[index].innerHTML = "" + videoTimer--;
+        } else {
+            videoTexts[index].innerHTML = "";
+            videoImages[index].classList.remove("hide");
+            clearInterval(interval);
+        }
+    }, 1000);
+}
 
 closeVideoButton1.addEventListener("click", () => {
-    videos[0].classList.add("hide");
+    hideVideo(0);
 })
 closeVideoButton2.addEventListener("click", () => {
-    videos[1].classList.add("hide");
+    hideVideo(1);
 })
 
 
@@ -794,7 +823,7 @@ const initGrid = () => {
 };
 
 const showVideo = index => {
-    videos[index].classList.remove("hide");
+    animateVideoButton(index);
 }
 
 const showMenu = () => {

@@ -116,15 +116,25 @@
             top: 20px;
             right: 20px;
 
-            background: #fff;
+            background: #879fd3;
             border-radius: 50%;
             z-index: 10;
             cursor: pointer;
         }
 
+        .close .text {
+            font-size: 24px;
+            color: #ffffff;
+        }
+
         .close img {
             width: 28px;
             height: 28px;
+            filter: invert(1);
+        }
+
+        .close img.hide {
+            display: none;
         }
     </style>
 
@@ -172,13 +182,15 @@
 <div class="video video1 hide">
     <div id="video1"></div>
     <div class="close">
-        <img src="./src/assets/ad_close.png" />
+        <div class="text"></div>
+        <img class="image" src="./src/assets/ad_close.png" />
     </div>
 </div>
 <div class="video video2 hide">
     <div id="video2"></div>
     <div class="close">
-        <img src="./src/assets/ad_close.png" />
+        <div class="text"></div>
+        <img class="image" src="./src/assets/ad_close.png" />
     </div>
 </div>
 
@@ -212,17 +224,46 @@ class createContainer{constructor({name:a,p:b,visible:c=!0,alpha:d=1,x:e=0,y:f=0
 <script>
 const video1 = document.querySelector(".video1");
 const closeVideoButton1 = video1.querySelector(".close");
+const closeVideoButton1Img = closeVideoButton1.querySelector(".image");
+const closeVideoButton1Text = closeVideoButton1.querySelector(".text");
 
 const video2 = document.querySelector(".video2");
 const closeVideoButton2 = video2.querySelector(".close");
+const closeVideoButton2Img = closeVideoButton2.querySelector(".image");
+const closeVideoButton2Text = closeVideoButton2.querySelector(".text");
 
 const videos = [video1, video2];
+const videoImages = [closeVideoButton1Img, closeVideoButton2Img];
+const videoTexts = [closeVideoButton1Text, closeVideoButton2Text];
+
+const hideVideo = index => {
+    videos[index].classList.add("hide");
+}
+
+const animateVideoButton = index => {
+    console.log(1)
+    videos[index].classList.remove("hide");
+    videoImages[index].classList.add("hide");
+
+    let videoTimer = 9;
+    console.log(videoTexts[index])
+    videoTexts[index].innerHTML = "" + videoTimer--;
+    const interval = setInterval(() => {
+        if (videoTimer >= 0) {
+            videoTexts[index].innerHTML = "" + videoTimer--;
+        } else {
+            videoTexts[index].innerHTML = "";
+            videoImages[index].classList.remove("hide");
+            clearInterval(interval);
+        }
+    }, 1000);
+}
 
 closeVideoButton1.addEventListener("click", () => {
-    videos[0].classList.add("hide");
+    hideVideo(0);
 })
 closeVideoButton2.addEventListener("click", () => {
-    videos[1].classList.add("hide");
+    hideVideo(1);
 })
 
 
@@ -1006,7 +1047,7 @@ const initGrid = () => {
 };
 
 const showVideo = index => {
-    videos[index].classList.remove("hide");
+    animateVideoButton(index);
 }
 
 const showMenu = () => {
