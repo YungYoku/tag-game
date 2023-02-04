@@ -12,17 +12,18 @@ const videos = [video1, video2];
 const videoImages = [closeVideoButton1Img, closeVideoButton2Img];
 const videoTexts = [closeVideoButton1Text, closeVideoButton2Text];
 
+let videoTimer = 9;
 const hideVideo = index => {
-    videos[index].classList.add("hide");
+    if (videoTimer === -1) {
+        videos[index].classList.add("hide");
+    }
 }
 
 const animateVideoButton = index => {
-    console.log(1)
+    videoTimer = 9;
     videos[index].classList.remove("hide");
     videoImages[index].classList.add("hide");
 
-    let videoTimer = 9;
-    console.log(videoTexts[index])
     videoTexts[index].innerHTML = "" + videoTimer--;
     const interval = setInterval(() => {
         if (videoTimer >= 0) {
