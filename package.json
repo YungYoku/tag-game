@@ -9,13 +9,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@capacitor/android": "^4.6.1",
     "@capacitor/assets": "^2.0.4",
-    "@capacitor/cli": "^4.6.1",
-    "@capacitor/core": "^4.6.1",
-    "eslint": "^8.30.0",
-    "prettier": "^2.8.1",
-    "vite": "^4.0.3",
-    "vite-plugin-pwa": "^0.14.0"
+    "@capacitor/cli": "^4.6.3",
+    "@capacitor/core": "^4.6.3",
+    "@capacitor/android": "^4.6.3",
+    "eslint": "^8.33.0",
+    "prettier": "^2.8.3",
+    "vite": "^4.1.1",
+    "vite-plugin-pwa": "^0.14.1"
   }
 }

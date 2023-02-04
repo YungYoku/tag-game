@@ -496,6 +496,7 @@ const restart = () => {
     appMc.mcEnding.visible = false;
     appMc.mcStart.visible = true;
     appMc.gameStarted = false;
+    appMc.timerDigitWrap.x = appMc.gridWidth / 2 - 6;
     initTimer();
     hideTimer();
     hideCells();
@@ -907,11 +908,9 @@ const updateTextTimerPos = () => {
         appMc.mcTimerText.x = 110;
         appMc.timerDigitWrap.x = appMc.gridWidth / 2 - 50;
     } else if (appMc.time > 99) {
-        console.log(1)
         appMc.mcTimerText.x = 100;
         appMc.timerDigitWrap.x = appMc.gridWidth / 2 - 50;
     } else if (appMc.time > 9) {
-        console.log(2)
         appMc.mcTimerText.x = 90;
         appMc.timerDigitWrap.x = appMc.gridWidth / 2 - 40;
     } else {
