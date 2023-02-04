@@ -440,7 +440,6 @@ const handlePointerUp = (obj, x, y) => {
         moveCell(obj, x, y);
 
         if (checkWin()) {
-            appMc.gameStarted = false;
             updateTextTimerPos();
             removeTimer();
 
