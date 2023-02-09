@@ -832,7 +832,27 @@ const initGrid = () => {
 };
 
 const showVideo = index => {
-    animateVideoButton(index);
+    if (window.innerWidth < 768) {
+        if (index === 0) {
+            window.yaContextCb.push(()=>{
+                Ya.Context.AdvManager.render({
+                    type: 'fullscreen',
+                    platform: 'touch',
+                    blockId: 'R-A-2078256-9'
+                })
+            })
+        } else if (index === 1) {
+            window.yaContextCb.push(()=>{
+                Ya.Context.AdvManager.render({
+                    type: 'fullscreen',
+                    platform: 'touch',
+                    blockId: 'R-A-2078256-10'
+                })
+            })
+        }
+    } else {
+        animateVideoButton(index);
+    }
 }
 
 const showMenu = () => {
