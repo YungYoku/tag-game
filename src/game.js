@@ -452,7 +452,7 @@ const handlePointerUp = (obj, x, y) => {
 };
 
 const shuffleCells = () => {
-    for (let k = 0; k < 100 * appMc.cellsDifficlty; k++) {
+    for (let k = 0; k < 1000 * appMc.cellsDifficlty; k++) {
         const x = Math.floor(Math.random() * appMc.cellsColumnsAmount);
         const y = Math.floor(Math.random() * appMc.cellsRowsAmount);
 
@@ -898,9 +898,9 @@ const InitBasicObj = () => {
 
     //UI
     appMc.mcUI = new createContainer({p: appMc.mcMain});
+    appMc.mcUI.interactive = true;
+    appMc.mcUI.on("pointerup", firstClickMusicEnabling);
 
-    //Logo
-    appMc.mcLogo = new createSprite({p: appMc.mcUI, tex: "logo"});
 
     //- mcBgOverlay
     appMc.mcBgOverlay = new createRect({
@@ -966,23 +966,39 @@ const InitBasicObj = () => {
 const InitAnimation = () => {
     appMc.mcMain.visible = true;
     document.getElementById("main").style.visibility = "visible";
-    appSounds["bg"].play();
     stateGame = 0;
 };
 
+const firstClickMusicEnabling = () => {
+    appMc.mcUI.interactive = false;
+    appSounds["bg"].play();
+
+    if (!isGlobalSound) {
+        turnMusicOn();
+    }
+}
+
+const turnMusicOn = () => {
+    isGlobalSound = true;
+
+    appMc.mcBtnSoundB.texture = moduleTexture.pixiTextures["btn_sound_on"];
+
+    Howler.mute(false);
+}
+
+const turnMusicOff = () => {
+    isGlobalSound = false;
+
+    appMc.mcBtnSoundB.texture = moduleTexture.pixiTextures["btn_sound_off"];
+
+    Howler.mute(true);
+}
+
 const BtnGlobalSound = () => {
     if (isGlobalSound) {
-        isGlobalSound = false;
-
-        appMc.mcBtnSoundB.texture = moduleTexture.pixiTextures["btn_sound_off"];
-
-        Howler.mute(true);
+        turnMusicOff();
     } else {
-        isGlobalSound = true;
-
-        appMc.mcBtnSoundB.texture = moduleTexture.pixiTextures["btn_sound_on"];
-
-        Howler.mute(false);
+        turnMusicOn();
     }
 };
 
