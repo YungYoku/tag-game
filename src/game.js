@@ -651,6 +651,8 @@ const initDifficulty = () => {
         x: appMc.gridWidth / 2,
         y: appMc.gridHeight / 2 - 50,
     });
+    appMc.mcDifficltyWrap.interactive = true;
+    appMc.mcDifficltyWrap.on("pointerup", changeDifficulty);
 
     appMc.mcDifficltyText = new createSprite({
         p: appMc.mcDifficltyWrap,
@@ -658,8 +660,6 @@ const initDifficulty = () => {
         scale: 0.5,
         x: -20,
     });
-    appMc.mcDifficltyText.interactive = true;
-    appMc.mcDifficltyText.on("pointerup", changeDifficulty);
 
     appMc.mcDifficltyNumber = new createDigit({
         p: appMc.mcDifficltyWrap,
@@ -956,7 +956,7 @@ const InitBasicObj = () => {
     appMc.mcBtnSound = new createContainer({p: appMc.mcUI});
     appMc.mcBtnSoundB = new createSprite({
         p: appMc.mcBtnSound,
-        tex: "btn_sound_on",
+        tex: "btn_sound_off",
     });
 
     appMc.mcBtnSound.interactive = true;
