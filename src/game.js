@@ -17,7 +17,7 @@ const hideVideo = index => {
     if (videoTimer === -1) {
         videos[index].classList.add("hide");
     }
-}
+};
 
 const animateVideoButton = index => {
     videoTimer = 9;
@@ -34,21 +34,21 @@ const animateVideoButton = index => {
             clearInterval(interval);
         }
     }, 1000);
-}
+};
 
 closeVideoButton1.addEventListener("click", () => {
     hideVideo(0);
-})
+});
 closeVideoButton2.addEventListener("click", () => {
     hideVideo(1);
-})
+});
 
 
-try {
-    window.screen.orientation.lock("portrait");
-} catch (error) {
-    console.log(error);
-}
+//try {
+//    window.screen.orientation.lock("portrait");
+//} catch (error) {
+//    console.log(error);
+//}
 
 let i, j, k, n;
 
@@ -195,74 +195,74 @@ const dataDigit = [
     {
         frames: {
             "0.png": {
-                frame: {x: 0, y: 0, w: 36, h: 54},
+                frame: { x: 0, y: 0, w: 36, h: 54 },
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
-                sourceSize: {w: 36, h: 54},
+                spriteSourceSize: { x: 0, y: 0, w: 36, h: 54 },
+                sourceSize: { w: 36, h: 54 },
             },
             "1.png": {
-                frame: {x: 36, y: 0, w: 36, h: 54},
+                frame: { x: 36, y: 0, w: 36, h: 54 },
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
-                sourceSize: {w: 36, h: 54},
+                spriteSourceSize: { x: 0, y: 0, w: 36, h: 54 },
+                sourceSize: { w: 36, h: 54 },
             },
             "2.png": {
-                frame: {x: 72, y: 0, w: 36, h: 54},
+                frame: { x: 72, y: 0, w: 36, h: 54 },
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
-                sourceSize: {w: 36, h: 54},
+                spriteSourceSize: { x: 0, y: 0, w: 36, h: 54 },
+                sourceSize: { w: 36, h: 54 },
             },
             "3.png": {
-                frame: {x: 108, y: 0, w: 36, h: 54},
+                frame: { x: 108, y: 0, w: 36, h: 54 },
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
-                sourceSize: {w: 36, h: 54},
+                spriteSourceSize: { x: 0, y: 0, w: 36, h: 54 },
+                sourceSize: { w: 36, h: 54 },
             },
             "4.png": {
-                frame: {x: 144, y: 0, w: 36, h: 54},
+                frame: { x: 144, y: 0, w: 36, h: 54 },
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
-                sourceSize: {w: 36, h: 54},
+                spriteSourceSize: { x: 0, y: 0, w: 36, h: 54 },
+                sourceSize: { w: 36, h: 54 },
             },
             "5.png": {
-                frame: {x: 180, y: 0, w: 36, h: 54},
+                frame: { x: 180, y: 0, w: 36, h: 54 },
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
-                sourceSize: {w: 36, h: 54},
+                spriteSourceSize: { x: 0, y: 0, w: 36, h: 54 },
+                sourceSize: { w: 36, h: 54 },
             },
             "6.png": {
-                frame: {x: 216, y: 0, w: 36, h: 54},
+                frame: { x: 216, y: 0, w: 36, h: 54 },
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
-                sourceSize: {w: 36, h: 54},
+                spriteSourceSize: { x: 0, y: 0, w: 36, h: 54 },
+                sourceSize: { w: 36, h: 54 },
             },
             "7.png": {
-                frame: {x: 252, y: 0, w: 36, h: 54},
+                frame: { x: 252, y: 0, w: 36, h: 54 },
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
-                sourceSize: {w: 36, h: 54},
+                spriteSourceSize: { x: 0, y: 0, w: 36, h: 54 },
+                sourceSize: { w: 36, h: 54 },
             },
             "8.png": {
-                frame: {x: 288, y: 0, w: 36, h: 54},
+                frame: { x: 288, y: 0, w: 36, h: 54 },
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
-                sourceSize: {w: 36, h: 54},
+                spriteSourceSize: { x: 0, y: 0, w: 36, h: 54 },
+                sourceSize: { w: 36, h: 54 },
             },
             "9.png": {
-                frame: {x: 324, y: 0, w: 36, h: 54},
+                frame: { x: 324, y: 0, w: 36, h: 54 },
                 rotated: false,
                 trimmed: false,
-                spriteSourceSize: {x: 0, y: 0, w: 36, h: 54},
-                sourceSize: {w: 36, h: 54},
+                spriteSourceSize: { x: 0, y: 0, w: 36, h: 54 },
+                sourceSize: { w: 36, h: 54 },
             },
         },
         meta: {
@@ -270,7 +270,7 @@ const dataDigit = [
             version: "1",
             image: "digit.png",
             format: "RGBA8888",
-            size: {w: 360, h: 54},
+            size: { w: 360, h: 54 },
             scale: "1",
         },
     },
@@ -279,7 +279,7 @@ const dataDigit = [
 let gameScore = 0;
 let toRAD = Math.PI / 180;
 let stateGame = 0;
-let mouse = {x: 0, y: 0};
+let mouse = { x: 0, y: 0 };
 
 let isGlobalActive = false;
 let isGlobalSound = false;
@@ -505,7 +505,7 @@ const initCell = (x, y) => {
         snum: 0,
         pref: "",
         tint: 0xffffff,
-        scale:0.7
+        scale: 0.7
     });
 
     appMc.cellsDigitWrap[x][y].update(appMc.cellsDigit[x][y]);
@@ -674,7 +674,7 @@ const initDifficulty = () => {
         snum: 0,
         pref: "",
         tint: 0xffffff,
-        scale:0.7
+        scale: 0.7
     });
     appMc.mcDifficltyNumber.update(appMc.cellsDifficlty);
 };
@@ -834,26 +834,26 @@ const initGrid = () => {
 const showVideo = index => {
     if (window.innerWidth < 768) {
         if (index === 0) {
-            window.yaContextCb.push(()=>{
+            window.yaContextCb.push(() => {
                 Ya.Context.AdvManager.render({
-                    type: 'fullscreen',
-                    platform: 'touch',
-                    blockId: 'R-A-2078256-9'
-                })
-            })
+                    type: "fullscreen",
+                    platform: "touch",
+                    blockId: "R-A-2078256-9"
+                });
+            });
         } else if (index === 1) {
-            window.yaContextCb.push(()=>{
+            window.yaContextCb.push(() => {
                 Ya.Context.AdvManager.render({
-                    type: 'fullscreen',
-                    platform: 'touch',
-                    blockId: 'R-A-2078256-10'
-                })
-            })
+                    type: "fullscreen",
+                    platform: "touch",
+                    blockId: "R-A-2078256-10"
+                });
+            });
         }
     } else {
         animateVideoButton(index);
     }
-}
+};
 
 const showMenu = () => {
     if (appMc.gameStarted) {
@@ -875,17 +875,17 @@ const showMenu = () => {
 //____________________________________
 
 const InitBasicObj = () => {
-    appMc.mcMain = new createContainer({p: stage, visible: false});
-    appMc.mcGame = new createContainer({p: appMc.mcMain});
+    appMc.mcMain = new createContainer({ p: stage, visible: false });
+    appMc.mcGame = new createContainer({ p: appMc.mcMain });
 
-    appMc.mcWorldShake = new createContainer({p: appMc.mcGame});
+    appMc.mcWorldShake = new createContainer({ p: appMc.mcGame });
     appMc.mcWorldShake.shakeAX = 0;
     appMc.mcWorldShake.shakeAY = 0;
     appMc.mcWorldShake.shakeD = 0;
 
     //Back
-    appMc.mcWorldCamera = new createContainer({p: appMc.mcWorldShake});
-    appMc.mcBg = new createSprite({p: appMc.mcWorldCamera, tex: "bg"});
+    appMc.mcWorldCamera = new createContainer({ p: appMc.mcWorldShake });
+    appMc.mcBg = new createSprite({ p: appMc.mcWorldCamera, tex: "bg" });
 
     //Gradient
     appMc.mcGradient = new createGradient({
@@ -897,7 +897,7 @@ const InitBasicObj = () => {
     });
 
     //UI
-    appMc.mcUI = new createContainer({p: appMc.mcMain});
+    appMc.mcUI = new createContainer({ p: appMc.mcMain });
     appMc.mcUI.interactive = true;
     appMc.mcUI.on("pointerup", firstClickMusicEnabling);
 
@@ -916,7 +916,7 @@ const InitBasicObj = () => {
     });
 
     //Btn
-    appMc.mcBtn = new createContainer({p: appMc.mcUI});
+    appMc.mcBtn = new createContainer({ p: appMc.mcUI });
     appMc.mcBtnBG = new createRect({
         p: appMc.mcBtn,
         x: -150 * 0.5,
@@ -943,7 +943,7 @@ const InitBasicObj = () => {
     });
 
     //- mcBtnSound
-    appMc.mcBtnHomeWrap = new createContainer({p: appMc.mcUI});
+    appMc.mcBtnHomeWrap = new createContainer({ p: appMc.mcUI });
     appMc.mcBtnHome = new createSprite({
         p: appMc.mcBtnHomeWrap,
         tex: "home",
@@ -953,7 +953,7 @@ const InitBasicObj = () => {
     appMc.mcBtnHome.on("pointerup", showMenu);
 
     //- mcBtnSound
-    appMc.mcBtnSound = new createContainer({p: appMc.mcUI});
+    appMc.mcBtnSound = new createContainer({ p: appMc.mcUI });
     appMc.mcBtnSoundB = new createSprite({
         p: appMc.mcBtnSound,
         tex: "btn_sound_off",
@@ -976,7 +976,7 @@ const firstClickMusicEnabling = () => {
     if (!isGlobalSound) {
         turnMusicOn();
     }
-}
+};
 
 const turnMusicOn = () => {
     isGlobalSound = true;
@@ -984,7 +984,7 @@ const turnMusicOn = () => {
     appMc.mcBtnSoundB.texture = moduleTexture.pixiTextures["btn_sound_on"];
 
     Howler.mute(false);
-}
+};
 
 const turnMusicOff = () => {
     isGlobalSound = false;
@@ -992,7 +992,7 @@ const turnMusicOff = () => {
     appMc.mcBtnSoundB.texture = moduleTexture.pixiTextures["btn_sound_off"];
 
     Howler.mute(true);
-}
+};
 
 const BtnGlobalSound = () => {
     if (isGlobalSound) {

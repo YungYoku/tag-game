@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "tag_game.ru",
+      "sha256_cert_fingerprints": [
+        "81:FB:E6:72:3E:8A:CD:75:37:0E:2E:D4:EA:79:C1:C4:DC:88:01:56:29:8C:CD:59:1F:0B:3F:B1:52:A5:9A:B8"
+      ]
+    }
+  }
+]
